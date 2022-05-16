@@ -1,0 +1,94 @@
+{
+	"browserSyncOptions": {
+		"proxy": "localhost:8080/",
+		"notify": false
+	},
+	"browserSyncWatchFiles": [
+		"./css/*.min.css",
+		"./js/*.min.js",
+		"./**/*.php"
+	],
+	"watchTask": {
+		"styles": true,
+		"scripts": true,
+		"svgmin": false,
+		"imagemin": false
+	},
+	"loadBoostrapJS" : false,
+	"paths": {
+		"js": "./js",
+		"css": "./css",
+		"sass": "src/sass",
+		"scripts": "src/js",
+		"node": "./node_modules/",
+		"bower": "./bower_components/",
+		"bowerJS": "./js/bower_components",
+		"bowerCSS": "./css/bower_components",
+		"dev": "./src",
+		"distDev": "./dist-dev",
+		"distProd": "./dist-prod",
+		"img": "./img",
+		"imgsrc": "./src/img",
+		"svg": "./svg",
+		"svgsrc": "./src/svg",
+		"vendor": "",
+		"deployThemeDev": "",
+		"deployMediaDev": "",
+		"deployThemeProd": "",
+		"deployMediaProd": ""
+	},
+	"ftp": {
+		"dev": {
+			"host": "ftp.dev.legendary.pt",
+			"user": "dev@dev.legendary.pt",
+			"password": "oLh@Q6Da?fvw",
+			"parallel": 10,
+			"reload": true
+		},
+		"prod": {
+			"host": "",
+			"user": "",
+			"password": "",
+			"parallel": 10
+		}
+	},
+	"babelOptions": {
+		"presets": [
+			["@babel/env"]
+		]
+	},
+	"wiredepOptions": {
+		"exclude": ["/bootstrap/"],
+		"directory": "bower_components"
+	},
+	"lint_js": true,
+	"lint_opt": {
+		"parserOptions": {
+			"ecmaVersion": 6,
+			"sourceType": "module",
+			"ecmaFeatures": {
+				"jsx": true
+			}
+		},
+		"rules": {
+			"camelcase": 1,
+			"comma-dangle": 2,
+			"quotes": 0,
+			"eqeqeq": 1,
+			"no-else-return": [1, {
+				"allowElseIf": true
+			}],
+			"no-unused-consts": [1, {
+				"consts": "local",
+				"args": "after-used",
+				"ignoreRestSiblings": false
+			}],
+			"no-empty-pattern": [2],
+			"no-implicit-globals": [1],
+			"no-fallthrough": [2]
+		},
+		"envs": [
+			"browser"
+		]
+	}
+}
